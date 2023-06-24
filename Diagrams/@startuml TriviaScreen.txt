@@ -1,0 +1,15 @@
+@startuml TriviaScreen
+
+
+Utilizator->TrainingScreen: Training interfața
+Utilizator -> TrainingScreen: Confirmarea numărului de întrebări 
+TrainingScreen -> QuizScreen: numQuestions
+Utilizator -> QuizScreen: Introducerea Username
+QuizScreen -> API:  HTTP GET
+QuizScreen <-API: Promise
+QuizScreen -> QuizScreen : Convertim promisunea în obiect .json
+QuizScreen -> QuizScreen : ShuffleQuestions
+Utilizator <- QuizScreen: Întrebări cu numărul din ammount
+
+
+@enduml

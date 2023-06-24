@@ -1,0 +1,10 @@
+@startuml HighScoreScreen
+
+
+Utilizator -> HighScoreScreen: Interfața HighScoreScreen
+QuizScreen -> AsyncStorageApi: Trimite score în matricea de scores
+AsyncStorageApi -> HighScoreScreen: Trimite Scores către HighScoreSCreen
+
+
+
+@enduml

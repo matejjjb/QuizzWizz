@@ -1,0 +1,13 @@
+@startuml QuizScreen
+
+
+Utilizator->QuizScreen: Start Quiz interfața
+Utilizator->QuizScreen: Introducerea username
+QuizScreen -> API:  HTTP GET
+QuizScreen <-API: Promise
+QuizScreen -> QuizScreen : Convertim promisunea în obiect .json
+QuizScreen -> QuizScreen : ShuffleQuestions
+Utilizator <- QuizScreen: Întrebări cu numărul din ammount
+
+
+@enduml
